@@ -5,7 +5,6 @@ global_t var;
  *  main -  interpreter for Monty ByteCodes files
  *  @argc: Number of paramethers
  *  @argv: Pointer to all the paramethers
- *
  *  Return: Always 0
  */
 int main(int argc, char **argv)
@@ -29,13 +28,13 @@ int main(int argc, char **argv)
 	while (getline(&var.getl_info, &line_buf_size, var.fp_struct) != EOF)
 	{
 		var.n_lines++;
-		if (line_validator(var.getl_info) == 1)
+		if ( linerz(var.getl_info) == 1)
 			continue;
 		/*split_str(var.getl_info);*/
 		execute_opcode(split_str(var.getl_info));
 	}
 	free(var.getl_info);
-	handle_dlist_head(var.stack_head);
+	  header(var.stack_head);
 	fclose(var.fp_struct);
 	return (EXIT_SUCCESS);
 }

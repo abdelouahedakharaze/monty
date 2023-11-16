@@ -14,9 +14,8 @@
  * @n: integer
  * @prev: points to the previous element of the stack (or queue)
  * @next: points to the next element of the stack (or queue)
- *
  * Description: doubly linked list node structure
- * for stack, queues, LIFO, FIFO Holberton project
+ * for stack, queues, LIFO, FIFO 
  */
 typedef struct stack_s
 {
@@ -29,9 +28,8 @@ typedef struct stack_s
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
  * @f: function to handle the opcode
- *
  * Description: opcode and its function
- * for stack, queues, LIFO, FIFO Holberton project
+ * for stack, queues, LIFO, FIFO
  */
 typedef struct instruction_s
 {
@@ -40,15 +38,14 @@ typedef struct instruction_s
 } instruction_t;
 
 /**
- * struct global_s - funtional data for project
+ * struct global_s - funtional data for
  * @n_lines: lines counter
  * @stack_head: stack head
  * @fp_struct: file
  * @getl_info: line content
  * @node_data: data node number
- *
  * Description: opcode and its function
- * for stack, queues, LIFO, FIFO Holberton project
+ * for stack, queues, LIFO, FIFO
  */
 typedef struct global_s
 {
@@ -68,27 +65,27 @@ extern global_t var;
 void execute_opcode(char *opcode);
 
 /* handle the head of a doubly linked list */
-void handle_dlist_head(stack_t *head);
+void   header(stack_t *head);
 
 /* get the opcode and check if the argument of push in an integer */
 char *split_str(char *str_to_split);
 
 /* helper functions */
 void is_digit(char *number);
-int line_validator(char *str);
+int  linerz(char *str);
 size_t dlistint_len(stack_t *h);
 
 /* opcode functions */
-void op_push(stack_t **stack, unsigned int line_number);
-void op_pall(stack_t **stack, unsigned int line_number);
-void op_pint(stack_t **stack, unsigned int line_number);
-void op_swap(stack_t **stack, unsigned int line_number);
-void op_pop(stack_t **stack, unsigned int line_number);
-void op_add(stack_t **stack, unsigned int line_number);
-void op_nop(stack_t **stack, unsigned int line_number);
-void op_sub(stack_t **stack, unsigned int line_number);
-void op_div(stack_t **stack, unsigned int line_number);
-void op_mul(stack_t **stack, unsigned int line_number);
-void op_mod(stack_t **stack, unsigned int line_number);
+void my_push(stack_t **stack, unsigned int line_number);
+void mypall(stack_t **stack, unsigned int line_number);
+void mypint(stack_t **stack, unsigned int line_number);
+void myswap(stack_t **stack, unsigned int line_number);
+void mypop(stack_t **stack, unsigned int line_number);
+void myadd(stack_t **stack, unsigned int line_number);
+void pynop(stack_t **stack, unsigned int line_number);
+void mysub(stack_t **stack, unsigned int line_number);
+void mydiv(stack_t **stack, unsigned int line_number);
+void mymul(stack_t **stack, unsigned int line_number);
+void mymod(stack_t **stack, unsigned int line_number);
 
 #endif /* MONTY_H */

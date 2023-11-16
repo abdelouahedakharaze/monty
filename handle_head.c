@@ -1,12 +1,12 @@
 #include "monty.h"
 
 /**
- * handle_dlist_head - Handle the head of a doubly linked list
+ *   header - Handle the head of a doubly linked list
  * @head: Address of the head of the linked list
  *
  * Return: Nothing.
  */
-void handle_dlist_head(stack_t *head)
+void   header(stack_t *head)
 {
 	stack_t *tmp_1 = NULL, *tmp_2 = NULL;
 

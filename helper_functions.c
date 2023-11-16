@@ -1,12 +1,12 @@
 #include "monty.h"
 
 /**
- * line_validator - check whitespaces
+ *  linerz - check whitespaces
  * @str: string for check
  *
  * Return: void
  */
-int line_validator(char *str)
+int  linerz(char *str)
 {
 	int index = 0, flag = 0, len = 0;
 
@@ -36,7 +36,7 @@ void is_digit(char *number)
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", var.n_lines);
 		free(var.getl_info);
-		handle_dlist_head(var.stack_head);
+		  header(var.stack_head);
 		fclose(var.fp_struct);
 		exit(EXIT_FAILURE);
 	}
@@ -44,7 +44,7 @@ void is_digit(char *number)
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", var.n_lines);
 		free(var.getl_info);
-		handle_dlist_head(var.stack_head);
+		  header(var.stack_head);
 		fclose(var.fp_struct);
 		exit(EXIT_FAILURE);
 	}
@@ -54,7 +54,7 @@ void is_digit(char *number)
 		{
 			fprintf(stderr, "L%u: usage: push integer\n", var.n_lines);
 			free(var.getl_info);
-			handle_dlist_head(var.stack_head);
+			  header(var.stack_head);
 			fclose(var.fp_struct);
 			exit(EXIT_FAILURE);
 		}

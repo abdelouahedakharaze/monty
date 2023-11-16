@@ -1,13 +1,13 @@
 #include "monty.h"
 
 /**
- * op_push - adds a new node at the stack
+ * my_push - adds a new node at the stack
  * @stack: pointer to the head of the stack
  * @line_number: number of the current line
  *
  * Return: void.
  */
-void op_push(stack_t **stack, unsigned int line_number)
+void my_push(stack_t **stack, unsigned int line_number)
 {
 	stack_t *new = NULL;
 
@@ -33,13 +33,13 @@ void op_push(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * op_pall - prints all the values on the stack
+ * mypall - prints all the values on the stack
  * @stack: pointer to the head of the stack
  * @line_number: number of the current line
  *
  * Return: void.
  */
-void op_pall(stack_t **stack, unsigned int line_number)
+void mypall(stack_t **stack, unsigned int line_number)
 {
 	stack_t *printer_aux = *stack;
 
@@ -54,20 +54,20 @@ void op_pall(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * op_pint - prints the value at the top of the stack.
+ * mypint - prints the value at the top of the stack.
  * @stack: pointer to the head of the stack
  * @line_number: number of the current line
  *
  * Return: void.
  */
-void op_pint(stack_t **stack, unsigned int line_number)
+void mypint(stack_t **stack, unsigned int line_number)
 {
 	if ((*stack) == NULL)
 	{
 		fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
 		free(var.getl_info);
 		fclose(var.fp_struct);
-		handle_dlist_head((*stack));
+		  header((*stack));
 		exit(EXIT_FAILURE);
 	}
 
@@ -75,13 +75,13 @@ void op_pint(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * op_swap - swaps the top two elements of the stack.
+ * myswap - swaps the top two elements of the stack.
  * @stack: pointer to the head of the stack
  * @line_number: number of the current line
  *
  * Return: void.
  */
-void op_swap(stack_t **stack, unsigned int line_number)
+void myswap(stack_t **stack, unsigned int line_number)
 {
 	int tmp = 0;
 
@@ -90,7 +90,7 @@ void op_swap(stack_t **stack, unsigned int line_number)
 		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
 		free(var.getl_info);
 		fclose(var.fp_struct);
-		handle_dlist_head((*stack));
+		  header((*stack));
 		exit(EXIT_FAILURE);
 	}
 
