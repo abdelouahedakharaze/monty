@@ -1,11 +1,10 @@
 #include "monty.h"
 
 /**
- * mydiv - add two elements on the top of the stack
- * @stack: pointer to the head of the stack
- * @line_number: number of the current line
- *
- * Return: the number of nodes
+ * mydiv - Performs addition with the top two elements on the stack.
+ * @stack: Pointer to the head of the stack.
+ * @line_number: Current line number.
+ * Return: Number of nodes.
  */
 void mydiv(stack_t **stack, unsigned int line_number)
 {
@@ -16,7 +15,7 @@ void mydiv(stack_t **stack, unsigned int line_number)
 	n = dlistint_len(var.stack_head);
 	if (n < 2)
 	{
-		  header(var.stack_head);
+		header(var.stack_head);
 		free(var.getl_info);
 		fclose(var.fp_struct);
 		fprintf(stderr, "L%u: can't div, stack too short\n", var.n_lines);
@@ -24,7 +23,7 @@ void mydiv(stack_t **stack, unsigned int line_number)
 	}
 	if ((*stack)->next->n == 0)
 	{
-		  header(var.stack_head);
+		header(var.stack_head);
 		free(var.getl_info);
 		fclose(var.fp_struct);
 		fprintf(stderr, "L%u: division by zero\n", var.n_lines);
@@ -40,11 +39,10 @@ void mydiv(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * mymul - add mul elements on the top of the stack
- * @stack: pointer to the head of the stack
- * @line_number: number of the current line
- *
- * Return: the number of nodes
+ * mymul - Multiplies two elements on the top of the stack.
+ * @stack: Pointer to the head of the stack.
+ * @line_number: Number of the current line.
+ * Return: The number of nodes.
  */
 void mymul(stack_t **stack, unsigned int line_number)
 {
@@ -55,7 +53,7 @@ void mymul(stack_t **stack, unsigned int line_number)
 	n = dlistint_len(var.stack_head);
 	if (n < 2)
 	{
-		  header(var.stack_head);
+		header(var.stack_head);
 		free(var.getl_info);
 		fclose(var.fp_struct);
 		fprintf(stderr, "L%u: can't mul, stack too short\n", var.n_lines);
@@ -71,11 +69,10 @@ void mymul(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * mymod - mod two elements on the top of the stack
- * @stack: pointer to the head of the stack
- * @line_number: number of the current line
- *
- * Return: the number of nodes
+ * mymod - Computes the modulo of two elements on the top of the stack.
+ * @stack: Pointer to the head of the stack.
+ * @line_number: Number of the current line.
+ * Return: The number of nodes.
  */
 void mymod(stack_t **stack, unsigned int line_number)
 {
@@ -86,7 +83,7 @@ void mymod(stack_t **stack, unsigned int line_number)
 	n = dlistint_len(var.stack_head);
 	if (n < 2)
 	{
-		  header(var.stack_head);
+		header(var.stack_head);
 		free(var.getl_info);
 		fclose(var.fp_struct);
 		fprintf(stderr, "L%u: can't mod, stack too short\n", var.n_lines);
@@ -94,7 +91,7 @@ void mymod(stack_t **stack, unsigned int line_number)
 	}
 	if ((*stack)->next->n == 0)
 	{
-		  header(var.stack_head);
+		header(var.stack_head);
 		free(var.getl_info);
 		fclose(var.fp_struct);
 		fprintf(stderr, "L%u: division by zero\n", var.n_lines);

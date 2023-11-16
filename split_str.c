@@ -1,10 +1,9 @@
 #include "monty.h"
 
 /**
- * split_str - divition by string
- * @str_to_split: string to check
- *
- * Return: split string
+ * split_str - Splits a string into segments.
+ * @str_to_split: The string to be divided.
+ * Return: The segmented version of the input string.
  */
 char *split_str(char *str_to_split)
 {

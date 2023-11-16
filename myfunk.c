@@ -1,11 +1,10 @@
 #include "monty.h"
 
 /**
- * my_push - adds a new node at the stack
- * @stack: pointer to the head of the stack
- * @line_number: number of the current line
- *
- * Return: void.
+ * my_push - Adds a new node to the stack.
+ * @stack: Pointer to the head of the stack.
+ * @line_number: Number of the current line.
+ * Return: Void.
  */
 void my_push(stack_t **stack, unsigned int line_number)
 {
@@ -33,11 +32,10 @@ void my_push(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * mypall - prints all the values on the stack
- * @stack: pointer to the head of the stack
- * @line_number: number of the current line
- *
- * Return: void.
+ * mypall - Prints all the values on the stack.
+ * @stack: Pointer to the head of the stack.
+ * @line_number: Number of the current line.
+ * Return: Void.
  */
 void mypall(stack_t **stack, unsigned int line_number)
 {
@@ -54,11 +52,10 @@ void mypall(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * mypint - prints the value at the top of the stack.
- * @stack: pointer to the head of the stack
- * @line_number: number of the current line
- *
- * Return: void.
+ * mypint - Prints the value at the top of the stack.
+ * @stack: Pointer to the head of the stack.
+ * @line_number: Number of the current line.
+ * Return: Void.
  */
 void mypint(stack_t **stack, unsigned int line_number)
 {
@@ -75,11 +72,10 @@ void mypint(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * myswap - swaps the top two elements of the stack.
- * @stack: pointer to the head of the stack
- * @line_number: number of the current line
- *
- * Return: void.
+ * myswap - Swaps the top two elements of the stack.
+ * @stack: Pointer to the head of the stack.
+ * @line_number: Number of the current line.
+ * Return: Void.
  */
 void myswap(stack_t **stack, unsigned int line_number)
 {
